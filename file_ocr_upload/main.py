@@ -35,6 +35,7 @@ def upload_to_supabase(public_url, user_id):
     except Exception as e:
         error_msg = f"{public_url} - Error: {str(e)}"
         logger.info(f"Failed to process attachment: {error_msg}")
+        raise  Exception(error_msg) from e
 
         
  

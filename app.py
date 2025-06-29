@@ -1,8 +1,8 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+import os
 import logging
 from datetime import datetime
-import os
+from pydantic import BaseModel
+from fastapi import FastAPI, HTTPException
 from file_ocr_upload.main import upload_to_supabase  
 
 # 创建logs目录
